@@ -1,4 +1,5 @@
 #include<stdio.h>
+//int array[23];
 
 int getarraysize()
 {
@@ -9,7 +10,7 @@ int getarraysize()
 }
 
 
-int isvalid(size)    
+int isvalid(int size)    
 {
     int val;
     if (size>4)
@@ -24,7 +25,7 @@ int isvalid(size)
     return val;
 }
 
-
+/*
 int initialise(size)
 {
     int element;
@@ -41,35 +42,35 @@ int initialise(size)
 }    
 
 
-int arraysum(array,size)
+int arraysum()
 {
-    int arraysize=getarraysize();
-    int array=initialise(arraysize);
+    int size=getarraysize();
+    int array=initialise(size);
     int sum=0;
     for (int i=0;i<size;i++)
     {
-        sum=sum+array[i];
+        sum=sum+array;
     }
     
 }
-
+*/
 
 
 int main()
 {
+    //int array[23];
     int arraysize=getarraysize();
-    int valid=isvalid(arraysize);
-    if (valid==0)
+    
+    while (true)
     {
-        while (arraysize<4)
+        int array[arraysize];
+        int valid=isvalid(arraysize);
+        if (valid==1)
         {
-            printf("array size is not valid please try again");
-            int arraysize=getarraysize();
+            break;
         }
-        
+        printf("array size is not valid please try again");
     }
     
-    
-    
-    int sum=arraysum(array,arraysize);
+    //int sum=arraysum();
 }

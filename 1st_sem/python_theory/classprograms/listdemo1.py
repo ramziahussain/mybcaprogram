@@ -7,4 +7,3 @@ for i in range(size):
     sum=sum+ele
 print(list)
 print("sum is:",sum)
-
